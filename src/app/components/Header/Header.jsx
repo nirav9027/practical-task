@@ -17,6 +17,22 @@ useEffect(() => {
   }
 }, [isMenuOpen]);
 
+/* Added sticky class for small header in scroll */
+const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    const stickySaved = localStorage.getItem('isSticky') === 'true';
+    if (stickySaved) {
+      setIsSticky(true);
+    }
+    const handleScroll = () => {
+      const shouldBeSticky = window.scrollY > 50;
+
+      setIsSticky(shouldBeSticky);
+      localStorage.setItem('isSticky', shouldBeSticky);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+})
 
 
     const MenuLists = [
@@ -30,7 +46,7 @@ useEffect(() => {
         }
     ]
   return (
-    <header className={`${styles.headerWrapper}`}>
+    <header className={`${styles.headerWrapper} ${isSticky ? styles.sticky : ''}`}>
         <div className={`container ${styles.container}`}>
             <div className={`${styles.headerContent}`}>
             <div className={`${styles.logo}`}>

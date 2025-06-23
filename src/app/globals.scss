@@ -317,6 +317,15 @@ input{
     margin-top: 60px;
   }
 }
+.mt-200{
+    margin-top: 200px;
+    @media (max-width:$xl)  {
+      margin-top: 160px;
+    }
+    @media (max-width:$md)  {
+      margin-top: 60px;
+    }
+}
 .icon{
   width: 28px;
   height: 28px;

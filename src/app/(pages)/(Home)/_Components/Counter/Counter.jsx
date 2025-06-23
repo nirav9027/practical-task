@@ -21,7 +21,7 @@ const Counter = () => {
         }
     ]
   return (
-    <section className={`${styles.counterWrapper} pt-100 pb-100`}>
+    <section className={`${styles.counterWrapper} pt-100`}>
         <div className='container'>
             <div className={`${styles.counterCardsWrapper}`}>
                 {CounterLists?.map((items,i) =>{
