@@ -1,0 +1,66 @@
+@import "../../../../assets/scss/breakpoints";
+@import "../../../../assets/scss/varibles";
+.bannerWrapper{
+    padding-top: 80px;
+    @media (max-width:$xl)  {
+      padding-top: 60px;
+    }
+    @media (max-width:$md)  {
+      padding-top: 30px;
+    }
+    .bannerContent{
+        text-align: center;
+        .title{
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            @media (max-width:$md)  {
+               margin-bottom: 16px;
+            }
+            br{
+                @media (max-width:$md)  {
+                    display: none;
+                }
+            }
+        }
+        p{
+            max-width: 758px;
+            font-weight: 500;
+            color:rgba($color: $white, $alpha: 0.8);
+            margin-bottom: 48px;
+            margin-inline: auto;
+            @media (max-width:$xl){
+                margin-bottom: 30px;
+            }
+            @media (max-width:$lg){
+                max-width: 610px;
+            }
+            @media (max-width:$md){
+               margin-bottom: 16px;
+            }
+        }
+        .bannerBtn{
+            padding: 29px 42px;
+            color: $white;
+            background: $primary;
+            box-shadow: 0px 6px 0px #001752;
+            border-radius: 100px;
+             margin-bottom: 20px;
+            @media (max-width:$xl){
+                padding: 25px 34px;
+            }
+            @media (max-width:$md){
+               padding: 20px 30px;
+            }
+            &:hover{
+                background: $white;
+                color: $black;
+                box-shadow: none;
+            }
+        }
+        .creditText{
+            display: block;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+    }
+}

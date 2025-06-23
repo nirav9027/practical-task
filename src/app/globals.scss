@@ -1,0 +1,339 @@
+@import 'assets/scss/varibles';
+@import 'assets/scss/breakpoints';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Varibles */
+:root {
+  /* Colors */
+  --black : #000000;
+  --white : $white;
+  --primary : #1758F7;
+  --grey54 : #384154;
+  --grey44:#2D3444;
+
+  /* BreakPoints */
+  $xl:1199px;
+  $lg:991px;
+  $md:767px;
+  $sm:479px;
+}
+
+/* Fonts  Nokora */
+@font-face {
+    font-family: 'Nokora';
+    src: url('../../public/fonts/Nokora-Bold.woff2') format('woff2'),
+        url('../../public/fonts/Nokora-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nokora';
+    src: url('../../public/fonts/Nokora-Black.woff2') format('woff2'),
+        url('../../public/fonts/Nokora-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+/* Fonts  Inter */
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter18pt-Light.woff2') format('woff2'),
+        url('../../public/fonts/Inter18pt-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter18pt-Regular.woff2') format('woff2'),
+        url('../../public/fonts/Inter18pt-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter18pt-Medium.woff2') format('woff2'),
+        url('../../public/fonts/Inter18pt-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter18pt-SemiBold.woff2') format('woff2'),
+        url('../../public/fonts/Inter18pt-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter18pt-ExtraBold.woff2') format('woff2'),
+        url('../../public/fonts/Inter18pt-ExtraBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+  font-family: 'Inter';
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  background-color: $black;
+  color: $white;
+  @media (max-width:$md){
+    font-size: 14px;
+  }
+}
+.container{
+  max-width: 1186px;
+  padding-inline :15px;
+  margin-inline: auto;
+}
+ul , ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: $white;
+  transition: 0.3s ease-in-out;
+  &:hover{
+    color: $primary;
+  }
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+button{
+  font-family: 'Inter';
+}
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6,
+p{
+  margin-bottom: 16px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.fontNokara{
+  font-family: 'Nokora' !important;
+}
+/* Typography */
+h1,.h1{
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: -0.2px;
+  @media (max-width:$xl)  {
+    font-size: 60px;
+  }
+  @media (max-width:$lg)  {
+    font-size: 44px;
+  }
+  @media (max-width:$md)  {
+    font-size: 32px;
+  }
+}
+h2,.h2{
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.2;
+  @media (max-width:$xl)  {
+    font-size: 42px;
+  }
+  @media (max-width:$lg)  {
+    font-size: 30px;
+  }
+}
+h3,.h3{
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1.2;
+  @media (max-width:$xl)  {
+    font-size: 34px;
+  }
+  @media (max-width:$lg)  {
+    font-size: 26px;
+  }
+}
+h4,.h4{
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  @media (max-width:$xl)  {
+    font-size: 30px;
+  }
+  @media (max-width:$lg)  {
+    font-size: 22px;
+  }
+}
+.fs-48{
+  font-size: 48px;
+  line-height: 0.94;
+  font-weight: 900;
+  @media (max-width:$xl)  {
+    font-size: 36px;
+  }
+  @media (max-width:$lg)  {
+    font-size: 28px;
+  }
+}
+.fs-20{
+  font-size: 20px;
+  font-weight: 500;
+  @media (max-width:$xl)  {
+    font-size: 18px;
+  }
+  @media (max-width:$lg)  {
+    font-size: 16px;
+  }
+}
+p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  @media (max-width:$xl)  {
+    font-size: 14px;
+  }
+}
+.fs-16{
+  font-size: 16px;
+  @media (max-width:$xl)  {
+    font-size: 14px;
+  }
+}
+body.menu-open{
+  overflow: hidden;
+}
+.inputWrapper{
+  position: relative;
+  margin-bottom: 24px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+input{
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid rgba($color: $white, $alpha: 0.24);
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $white;
+  @media (max-width:$xl)  {
+    font-size: 14px;
+  }
+  @media (max-width:$md)  {
+   line-height: 1.3;
+   padding: 8px 12px;
+  }
+  &::placeholder{
+    color: rgba($color: $white, $alpha: 0.7);
+  }
+  &:focus{
+    border-color: $primary;
+  }
+}
+.errorMessage{
+  position: absolute;
+  left: 0;
+  top: calc(100% + 3px);
+  font-size: 12px;
+  line-height: 1;
+  color: #ff0000;
+}
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 24px;
+  color: $black;
+  background-color: $white;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  @media (max-width:$xl) {
+     font-size: 18px;
+  }
+  &:hover{
+    background-color: $primary;
+    color: $white;
+  }
+}
+.pt-100{
+  padding-top: 100px;
+  @media (max-width:$xl)  {
+    padding-top: 80px;
+  }
+   @media (max-width:$md)  {
+    padding-top: 60px;
+  }
+}
+.pb-100{
+  padding-bottom: 100px;
+  @media (max-width:$xl)  {
+    padding-bottom: 80px;
+  }
+  @media (max-width:$md)  {
+    padding-bottom: 60px;
+  }
+}
+.mb-100{
+  margin-bottom: 100px;
+  @media (max-width:$xl)  {
+    margin-bottom: 80px;
+  }
+  @media (max-width:$md)  {
+    margin-bottom: 60px;
+  }
+}
+.mt-100{
+  margin-top: 100px;
+  @media (max-width:$xl)  {
+    margin-top: 80px;
+  }
+  @media (max-width:$md)  {
+    margin-top: 60px;
+  }
+}
+.icon{
+  width: 28px;
+  height: 28px;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  background-color: $primary;
+  @media (max-width:$lg){
+    width: 22px;
+    height: 22px;
+  }
+}
+.icon-star{
+  mask-image: url('../../public/images/icon-star.svg');
+  -webkit-mask-image: url('../../public/images/icon-star.svg');
+  background-color: #FAD23A;
+}
